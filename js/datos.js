@@ -7,7 +7,7 @@ const DATOS = {
   novio: "Gustavo",
 
   // Formato recomendado: YYYY-MM-DDTHH:MM:SS
-  fechaEvento: "2026-11-14T22:00:00",
+  fechaEvento: "2026-11-14T21:00:00",
 
   ceremonia: "Parroquia San Ramón",
   salon: "Malvinas Argentinas (Polideportivo Comunicaciones)",
