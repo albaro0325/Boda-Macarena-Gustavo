@@ -69,5 +69,22 @@ footer{background:var(--blue);color:white;text-align:center;padding:38px 15px;fo
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.reveal.visible{opacity:1;transform:none}
 @keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 @keyframes slowZoom{from{transform:scale(1.04)}to{transform:scale(1)}}
+
+.topbar {
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%, 480px);
+    height: 25px;
+    background: #ee8f8f;
+    color: #e8eeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 40%;
+}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 #fff0}50%{box-shadow:0 0 0 12px #fff2}}
 @media(min-width:700px){body{background:#20252a}}
