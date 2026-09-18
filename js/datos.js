@@ -12,8 +12,8 @@ const DATOS = {
   ceremonia: "Parroquia San Ramón",
   salon: "Malvinas Argentinas (Polideportivo Comunicaciones)",
 
-  instagram: "", // Ej.: "https://instagram.com/usuario"
-  instagramTexto: "@TU_INSTAGRAM",
+  instagram: "https://www.instagram.com/boda_macaygustavo/", // Ej.: "https://instagram.com/usuario"
+  instagramTexto: "@boda_macaygustavo",
 
   whatsapp: "5493794519070",
 
