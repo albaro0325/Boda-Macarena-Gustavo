@@ -17,11 +17,11 @@ const DATOS = {
 
   whatsapp: "5493794519070",
 
-  musicaTitulo: "Perfect",
-  musicaArtista: "Ed Sheeran",
+  musicaTitulo: "Quiero caminar de tu mano",
+  musicaArtista: "Rio Roma",
   musicaArchivo: "audio/musica.mp3",
 
-  alias: "albaro.daniel.gomez",
+  alias: "ARUMA.GS",
 
   dressCode: "Elegante / Cóctel.",
   regalo: "Tu presencia es nuestro mejor regalo. Si querés obsequiarnos algo, podés hacerlo mediante transferencia.",
