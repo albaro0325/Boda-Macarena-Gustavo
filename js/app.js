@@ -2,20 +2,28 @@ const $ = s => document.querySelector(s);
 const audio = $("#audio");
 const musicBtn = $("#musicBtn");
 
+ /* ================================================
+  CODIGO ANTERIOR (OCULTO / DESACTIVADO):
 function iniciar() {
   const d = window.DATOS || DATOS;
   $("#aliasText").textContent = d.alias;
   $("#phoneText").textContent = "+" + d.whatsapp;
   $("#instagramHandle").textContent = d.instagramTexto || "@TU_INSTAGRAM";
   $("#instagramLink").href = d.instagram || "#";
-  /* ================================================
-  CODIGO ANTERIOR (OCULTO / DESACTIVADO):
+ 
   $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(
     `Hola Macarena y Gustavo! Quiero confirmar mi asistencia a su boda del 14 de noviembre de 2026.`
   )}`;
   ================================================= */
 
-  // 1. Capturar la cantidad de invitados desde la URL (?invitados=N)
+function iniciar() {
+  const d = window.DATOS || DATOS;
+  $("#aliasText").textContent = d.alias;
+  $("#phoneText").textContent = "+" + d.whatsapp;
+  $("#instagramHandle").textContent = d.instagramTexto || "@TU_INSTAGRAM";
+  $("#instagramLink").href = d.instagram || "#";
+
+  // 1. Obtener la cantidad de invitados desde la URL (?invitados=N)
   const params = new URLSearchParams(window.location.search);
   const cant = parseInt(params.get('invitados')) || 1;
 
@@ -27,9 +35,10 @@ function iniciar() {
     mensaje = `¡Hola Macarena y Gustavo! Queremos confirmar nuestra asistencia a su boda del 14 de noviembre de 2026. Asistiremos ${cant} personas.`;
   }
 
-  // 3. Asignar la nueva URL dinámica al botón
+  // 3. Asignar el enlace dinámico al botón
   $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(mensaje)}`;
 }
+
 
 
   $("#churchMap").href = "https://maps.app.goo.gl/5aPu3sxPWhLRTcNP9";
