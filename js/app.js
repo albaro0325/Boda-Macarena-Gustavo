@@ -8,9 +8,29 @@ function iniciar() {
   $("#phoneText").textContent = "+" + d.whatsapp;
   $("#instagramHandle").textContent = d.instagramTexto || "@TU_INSTAGRAM";
   $("#instagramLink").href = d.instagram || "#";
+  /* ================================================
+  CODIGO ANTERIOR (OCULTO / DESACTIVADO):
   $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(
     `Hola Macarena y Gustavo! Quiero confirmar mi asistencia a su boda del 14 de noviembre de 2026.`
   )}`;
+  ================================================= */
+
+  // 1. Capturar la cantidad de invitados desde la URL (?invitados=N)
+  const params = new URLSearchParams(window.location.search);
+  const cant = parseInt(params.get('invitados')) || 1;
+
+  // 2. Construir el mensaje según la cantidad
+  let mensaje = "";
+  if (cant === 1) {
+    mensaje = "¡Hola Macarena y Gustavo! Quiero confirmar mi asistencia a su boda del 14 de noviembre de 2026.";
+  } else {
+    mensaje = `¡Hola Macarena y Gustavo! Queremos confirmar nuestra asistencia a su boda del 14 de noviembre de 2026. Asistiremos ${cant} personas.`;
+  }
+
+  // 3. Asignar la nueva URL dinámica al botón
+  $("#whatsapp").href = `https://wa.me/${d.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+}
+
 
   $("#churchMap").href = "https://maps.app.goo.gl/5aPu3sxPWhLRTcNP9";
   $("#hallMap").href = "https://maps.app.goo.gl/KAYERztRD7hR8Lzx9";
